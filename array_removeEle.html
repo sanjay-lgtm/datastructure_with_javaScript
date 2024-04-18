@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      //   let data = [9, 45, 2, 4, 8, 766, 99, 63, 32, 78, 0, 77];
+      //   let position = 3;
+      //   for(let i=position; i <=data.length-1;i++){
+      //     data[i] = data[i+1];
+      //   }
+      //   data.length = data.length-1;
+      //   console.warn(data)
+
+      function removeEl() {
+        let data = [9, 45, 2, 4, 8, 766, 99, 63, 32, 78, 0, 77];
+        let position = document.getElementById('position').value;
+        position  = parseInt(position);
+        for (let i = position; i <= data.length - 1; i++) {
+          data[i] = data[i + 1];
+        }
+        data.length = data.length - 1;
+        console.warn(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter  Element" />
+    <button onclick="removeEl()">Delete</button>
+  </body>
+</html>
